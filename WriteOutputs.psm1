@@ -129,6 +129,7 @@ function Write-Result {
             $Level --
         }Until($Level -eq 0)
     }
+    ElseIf($Level -eq 0){$MsgConstruction = "$(Get-Date -Format U) - "}
     If($Error){$MsgConstruction += "ERROR: "}
     Elseif($Warning){$MsgConstruction += "WARNING: "}
     #Alter result output
